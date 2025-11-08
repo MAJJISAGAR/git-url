@@ -75,9 +75,9 @@ resource "aws_security_group" "sg-new" {
 }
 
 resource "aws_instance" "my-ec2" {
-  ami                    = "ami-0af9569868786b23a"
-  instance_type          = "t2.micro"
-  key_name               = "sagar123"
+  ami                    = "ami-0157af9aea2eef346"
+  instance_type          = "t3.micro"
+  key_name               = "sagar-key"
   vpc_security_group_ids = [aws_internet_gateway.igw-new.id]
   subnet_id              = aws_subnet.sub-1.id
   depends_on             = [aws_internet_gateway.igw-new]
